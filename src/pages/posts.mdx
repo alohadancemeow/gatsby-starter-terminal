@@ -1,27 +1,10 @@
 ---
-navigationLabel: Posts
+navigationLabel: posts
 ---
 
-# Posts
+import { Link as GatsbyLink } from 'gatsby'
+import { PostsPage } from '../components/posts-page'
 
-This is `src/pages/posts.mdx`
+# posts
 
-Here we use the `<SourceList />` to list files found in `posts`
-
-<SourceList>
-  {source => (
-    <ul>
-      {source.map((edge, index) => {
-        const {
-          frontmatter: { title },
-          fields: { slug }
-        } = edge.node;
-        return (
-          <li key={index}>
-            <a href={slug}>{title}</a>
-          </li>
-        );
-      })}
-    </ul>
-  )}
-</SourceList>
+<PostsPage />
